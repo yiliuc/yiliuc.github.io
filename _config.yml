@@ -1,0 +1,18 @@
+# Site settings
+title: My Awesome Site
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  This is my personal website hosted on GitHub Pages.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: johndoe
+github_username: johndoe
+
+# Build settings
+markdown: kramdown
+theme: minima # This is where you specify your theme
+
+# Plugins (GitHub Pages supports a set of plugins with safe mode enabled)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
