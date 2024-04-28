@@ -1,3 +1,3 @@
-# Yiliu Cao's homepage
+# Yiliu Cao's Personal Website
 
-Hi! Welcome to Yiliu Cao's homepage. This site is currently under construction, please come back later!
+This repo is for the construction of my personal website.
