@@ -4,140 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Yiliu Cao" />
-    <meta name="description" content="Yiliu Cao's homepage" />
-    <title>Yiliu Cao</title>
-    <link rel="stylesheet" href="css/normalize.css" />
+    <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <script
+      src="https://kit.fontawesome.com/93f125bec6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <h2>Products</h2>
-      </section>
-      <section>
-        <h2>Testimonial</h2>
-      </section>
-    </main>
-    <aside></aside>
-    <footer></footer>
-    <h1>Yiliu Cao's homepage</h1>
-    <p>
-      Hi! Welcome to Yiliu Cao's homepage. This page is still under
-      construction. Please check again later.
-    </p>
-    <a href="papers/papers.html">Papers</a>
-    <a href="images/picture.jpg" download>My Photo</a>
-    <a href="#section-css">CSS</a>
-    <a href="https://google.com" target="_blank">Google</a>
-    <a href="mailto:yiliu.cao@mail.utoronto.ca">Email me</a>
-    <ul>
-      <li>
-        1
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul>
-      </li>
-      <li>2</li>
-    </ul>
-    <ol>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ol>
-    <dl>
-      <dt>HTML</dt>
-      <dd>Hypertext Markup language</dd>
-    </dl>
-    <table>
-      <thead>
-        <tr>
-          <th colspan="2">Expense</th>
-        </tr>
-        <tr>
-          <th>Category</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>11</td>
-          <td>12</td>
-        </tr>
-        <tr>
-          <td>21</td>
-          <td>22</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>Total</th>
-          <th>$300</th>
-        </tr>
-      </tfoot>
-    </table>
-    <div class="product">
-      <a href="#">Link</a>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga saepe
-        consequuntur earum voluptatum error iusto similique incidunt quos, atque
-        ut odio non eveniet quam doloribus assumenda accusantium consectetur,
-        soluta esse!
-      </p>
-    </div>
-    <div class="product">
-      <a href="#">Link</a>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga saepe
-        consequuntur earum voluptatum error iusto similique incidunt quos, atque
-        ut odio non eveniet quam doloribus assumenda accusantium consectetur,
-        soluta esse!
-      </p>
-    </div>
-    <p>
-      <span class="highlight">Lorem</span> ipsum dolor, sit amet consectetur
-      adipisicing elit.
-    </p>
-    <article class="article">
-      <h1>title</h1>
-      <p>published at <time>April 29, 2024</time></p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed fugit
-        consequatur dicta, quia fuga consectetur labore quam deleniti optio eos,
-        veritatis aliquid quo nemo repellat cumque? Fuga odio nulla nostrum.
-      </p>
-      <figure>
-        <img src="images/picture.jpg" alt="" />
-        <figcaption>my image</figcaption>
-      </figure>
-    </article>
-    <h2>HTML</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ratione,
-      consectetur quam nesciunt aut voluptates veniam voluptas odit itaque nisi
-      quidem veritatis vero harum assumenda qui delectus nemo eos molestias.
-    </p>
-    <h2 id="section-css">CSS</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima sit a
-      officiis consectetur cumque neque accusantium. Magnam, ex quod eaque ipsa
-      suscipit tenetur pariatur illum ea aspernatur, esse eius officiis.
-    </p>
-    <img src="images/picture.jpg" alt="My favorite picture" />
-    <video controls autoplay loop src="videos/ocean.mp4">
-      Your browser does not support videos
-    </video>
-    <a href="#">Jump to top</a>
+    <nav class="nav collapsible">
+      <a class="nav__title" href="/">
+        <p>Yiliu Cao</p>
+      </a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="#">Item 1</a></li>
+        <li class="nav__item"><a href="#">Item 2</a></li>
+        <li class="nav__item"><a href="#">Item 3</a></li>
+        <li class="nav__item"><a href="#">Item 4</a></li>
+      </ul>
+    </nav>
+    <script src="js/main.js"></script>
   </body>
 </html>
