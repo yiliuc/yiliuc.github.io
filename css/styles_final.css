@@ -1,0 +1,367 @@
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+  --color-body-darker: #5c5577;
+  --color-border: #ccc;
+  --border-radius: 30px;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav {
+  --color-nav-bar-background: #000;
+  --color-nav-bar-brand: #d2d0db;
+  --color-nav-bar-item: #d2d0db;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--color-body);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Icons */
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #ffffff;
+}
+
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Collapsible */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/* Navigation Bar */
+.nav {
+  background: var(--color-nav-bar-background);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 1rem;
+  align-items: center;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.nav__item > a {
+  color: var(--color-nav-bar-item);
+  transition: color 0.3s;
+  font-size: 1.8rem;
+}
+
+.nav__item > a:hover {
+  color: #ffff;
+}
+
+.nav__title {
+  display: flex;
+  align-items: center; /* Center the title content vertically */
+  margin: 0; /* Remove default margin */
+  margin-left: 1.8rem;
+}
+
+.nav__title > p {
+  color: var(--color-nav-bar-brand);
+  font-size: 2.5rem;
+  margin: 0; /* Ensure no margin around the title */
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* Grids */
+.grid {
+  display: grid;
+}
+
+.grid--main {
+  display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Main content */
+.main__content {
+  border-radius: 7px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.main__content__header,
+.main__content__body {
+  padding: 2rem 3rem;
+}
+
+.main__content--primary .main__content__header {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.main__content--secondary .main__content__header {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.main__content--primary .badge--primary {
+  background: #126de4;
+}
+
+.main__content--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+/* Profile */
+.profile {
+  padding-top: 5rem; /* Space between the profile and the navigation bar */
+  align-items: center;
+  margin: 0 auto;
+}
+
+.profile__info {
+  justify-self: center; /* Center the image and name within its column */
+  text-align: center; /* Center text below the image */
+}
+
+.profile__image {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.profile__name {
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: #000;
+}
+
+.profile__intro {
+  grid-column: 3; /* Place the intro in the right column */
+  margin-left: 2rem; /* Adjust this value to add space on the left of the intro */
+  align-self: center;
+}
+
+.profile__intro--text {
+  color: var(--color-body); /* Adjust the color as needed */
+}
+
+@media screen and (min-width: 768px) {
+  .profile .profile__intro {
+    font-size: 2.4rem;
+  }
+
+  .profile .profile__intro {
+    margin-left: 6rem;
+  }
+}
