@@ -144,7 +144,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -176,7 +175,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -262,6 +261,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -295,11 +295,19 @@ a {
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
 
 /* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
 .plan__name {
   color: #fff;
   margin: 0;
@@ -327,6 +335,22 @@ a {
 
 .plan .list__item {
   margin-bottom: 2rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -404,6 +428,7 @@ a {
   }
 }
 
+/* Testimonial */
 .testimonial {
   padding: 3rem;
 }
@@ -491,7 +516,9 @@ a {
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
+
 .block__heading {
   margin-top: 0;
 }
@@ -556,6 +583,7 @@ a {
   display: flex;
   align-items: center; /* Center the title content vertically */
   margin: 0; /* Remove default margin */
+  margin-left: 1.8rem;
 }
 
 .nav__title > p {
@@ -628,8 +656,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: rep(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -641,5 +670,135 @@ a {
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* Plans Block */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Features */
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+
+/* Own use */
+/* Grids*/
+.grid {
+  display: grid;
+}
+
+.grid--main {
+  display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Main content */
+.main__content {
+  border-radius: 7px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.main__content__header,
+.main__content__body {
+  padding: 2rem 3rem;
+}
+
+.main__content--primary .main__content__header {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.main__content--secondary .main__content__header {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.main__content--primary .badge--primary {
+  background: #126de4;
+}
+
+.main__content--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+/* Profile */
+.profile {
+  padding-top: 5rem; /* Space between the profile and the navigation bar */
+  align-items: center;
+  margin: 0 auto;
+}
+
+.profile__info {
+  justify-self: center; /* Center the image and name within its column */
+  text-align: center; /* Center text below the image */
+}
+
+.profile__image {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.profile__name {
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .profile .quote,
+  .profile .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .profile .quote {
+    margin-left: 6rem;
   }
 }
