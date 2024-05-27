@@ -11,6 +11,12 @@
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.nav {
+  --color-nav-bar-background: #000;
+  --color-nav-bar-brand: #d2d0db;
+  --color-nav-bar-item: #d2d0db;
+}
+
 *,
 *::after,
 *::before {
@@ -168,11 +174,12 @@ a {
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
+  text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
-  text-align: center;
-  margin: 1rem 0;
 }
 
 .btn--primary {
@@ -218,6 +225,13 @@ a {
   color: #fff;
 }
 
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -247,7 +261,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -508,7 +522,7 @@ a {
 
 /* Navigation Bar */
 .nav {
-  background: #000;
+  background: var(--color-nav-bar-background);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -529,7 +543,7 @@ a {
 }
 
 .nav__item > a {
-  color: #d2d0db;
+  color: var(--color-nav-bar-item);
   transition: color 0.3s;
   font-size: 1.8rem;
 }
@@ -545,7 +559,7 @@ a {
 }
 
 .nav__title > p {
-  color: #d2d0db;
+  color: var(--color-nav-bar-brand);
   font-size: 2.5rem;
   margin: 0; /* Ensure no margin around the title */
 }
@@ -602,5 +616,30 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* Domain block */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: rep(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
