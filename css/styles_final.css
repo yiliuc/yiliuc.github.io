@@ -90,7 +90,7 @@ p {
 }
 
 .icon--white {
-  fill: #ffffff;
+  fill: #626d78;
 }
 
 .icon-container {
@@ -387,7 +387,7 @@ a {
 }
 
 /* General styles for the button container */
-.button-container {
+.about-links {
   display: flex;
   justify-content: center; /* Center the buttons horizontally */
   align-items: center; /* Center the buttons vertically */
@@ -397,22 +397,18 @@ a {
 
 /* Buttons */
 .btn {
-  border-radius: 40px;
-  border: 0;
+  border: 1px solid;
   cursor: pointer;
-  font-size: 1.8rem;
-  font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 4vw;
+  padding: 0.25em 0.5em;
   text-align: center;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
 .btn--primary {
-  background-color: var(--color-primary);
-  color: #fff;
+  background-color: #fff;
+  color: #626d78;
 }
 
 .btn--primary:hover {
@@ -420,7 +416,7 @@ a {
 }
 
 .btn--secondary {
-  background-color: var(--color-secondary);
+  background-color: #fff;
   color: #fff;
 }
 
@@ -454,10 +450,10 @@ a {
 }
 
 .btn .icon {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
-  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: bottom;
 }
 
 @media screen and (min-width: 1024px) {
