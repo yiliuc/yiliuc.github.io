@@ -407,13 +407,14 @@ a {
   white-space: nowrap;
 }
 
+.icon--primary:hover,
+.btn:hover {
+  color: #3a8ffd;
+}
+
 .btn--primary {
   background-color: #fff;
   color: #626d78;
-}
-
-.btn--primary:hover {
-  background: #3a8ffd;
 }
 
 .btn--secondary {
