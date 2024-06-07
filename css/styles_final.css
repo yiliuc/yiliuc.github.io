@@ -397,6 +397,7 @@ a {
 
 /* Buttons */
 .btn {
+  border-radius: 4px;
   border: 1px solid;
   cursor: pointer;
   margin: 1rem 0;
