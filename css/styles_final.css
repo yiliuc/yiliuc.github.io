@@ -40,6 +40,7 @@ h1,
 h2,
 h3 {
   color: var(--color-headings);
+  margin-top: 1rem;
   margin-bottom: 1rem;
   line-height: 1.1;
 }
@@ -267,9 +268,17 @@ a {
   display: grid;
   width: 100%;
   max-width: 1000px;
-  margin: 4rem auto;
+
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+#homepage {
+  margin: 4rem auto;
+}
+
+#cv {
+  margin: 1rem auto;
 }
 
 @media screen and (min-width: 768px) {
