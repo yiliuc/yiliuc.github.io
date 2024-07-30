@@ -6,25 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Yiliu Cao" />
     <meta name="description" content="Yiliu Cao's homepage" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="https://yiliuc.github.io/" />
     <title>Yiliu Cao</title>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles_final.css" />
   </head>
   <body>
-    <h1>Yiliu Cao's homepage</h1>
-    <p>
-      Hi! Welcome to Yiliu Cao's homepage. This website is still under
-      construction. Please check again later.
-    </p>
-    <a href="https://github.com/yiliuc">My Github</a>
-    <a href="papers/papers.html">Papers</a>
-    <a href="mailto:yiliu.cao@mail.utoronto.ca">Contact me</a>
-    <a href="test.html">test</a>
-    <a href="final.html">final</a>
+    <nav class="nav collapsible">
+      <a class="nav__title" href="/">
+        <p>Yiliu Cao</p>
+      </a>
+      <svg class="icon icon--nav nav__toggler">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="final.html">Home</a></li>
+        <li class="nav__item"><a href="html/research.html">Research</a></li>
+        <li class="nav__item">
+          <a href="html/lecture_notes.html">Lecture Notes</a>
+        </li>
+        <li class="nav__item"><a href="html/teaching.html">Teaching</a></li>
+        <li class="nav__item">
+          <a href="html/cv.html">CV</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main__content profile">
+      <div id="homepage" class="grid--main grid--1x2">
+        <div class="profile__info">
+          <img
+            class="profile__image"
+            src="images/picture.jpg"
+            alt="Landscape"
+          />
+          <p class="profile__name">Yiliu Cao</p>
+          <p class="profile__title">MMath: Statistics</p>
+          <p class="profile__title">University of Waterloo</p>
+          <div class="about-links">
+            <button class="btn btn--about_links">
+              <a href="./docs/CV.pdf" target="_blank">CV</a>
+            </button>
+            <button class="btn btn--about_links">
+              <svg class="icon icon--about_links">
+                <use xlink:href="images/sprite.svg#email"></use>
+              </svg>
+              <a href="mailto:yiliu.cao@mail.utoronto.ca">Email</a>
+            </button>
+            <button class="btn btn--about_links">
+              <svg class="icon icon--about_links">
+                <use xlink:href="images/sprite.svg#github"></use>
+              </svg>
+              <a href="https://github.com/yiliuc" target="_blank">Github</a>
+            </button>
+          </div>
+        </div>
+        <div class="profile__intro">
+          <h3 class="profile__intro--heading">Welcome to my website!</h3>
+          <p class="profile__intro--text">
+            Hi! My name is Yiliu Cao, and I am an incoming student at the
+            University of Waterloo for the upcoming Fall, where I will be
+            pursuing a Master of Mathematics in Statistics. Previously, I earned
+            an Honours Bachelor of Science from the University of Toronto, with
+            double majors in Statistics and Economics, and a minor in
+            Mathematics.
+          </p>
+          <p class="profile__intro--text">
+            My research interest is mainly lied on the (Statistical) Machine
+            Learning and Causal Inference. Here is my CV.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
