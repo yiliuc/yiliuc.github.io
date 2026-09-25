@@ -102,6 +102,15 @@ main { padding-block: 1.5rem 4rem; min-height: 55vh; }
 .entry { margin-top: 1.75rem; }
 .entry p { margin-bottom: .6rem; }
 .entry-meta { font-family: var(--sans); font-size: .875rem; }
+.vitae-content .content-section > h2 { font-size: 1.25rem; font-weight: 700; }
+.education-list { --date-column: 9rem; }
+.education-row { display: grid; grid-template-columns: var(--date-column) minmax(0, 1fr); column-gap: 1.5rem; align-items: baseline; }
+.education-row + .education-row { margin-top: 1.5rem; }
+.education-date, .education-details p { margin: 0; font: inherit; }
+.education-school { margin: 0; color: var(--text); font: inherit; text-wrap: wrap; }
+.education-school strong { font-weight: 700; }
+.education-details { min-width: 0; overflow-wrap: break-word; }
+.vitae-content .entry h3 { font-size: 1.125rem; line-height: 1.75; }
 .download-link { display: inline-flex; padding: .5rem 1rem; border: 1px solid var(--line); border-radius: 3px; font-size: 1rem; background: var(--surface); }
 .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 2rem; }
 .gallery > :only-child { grid-column: 1 / -1; max-width: 800px; }
@@ -115,6 +124,7 @@ main { padding-block: 1.5rem 4rem; min-height: 55vh; }
 .dialog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; font: .875rem/1.5 var(--sans); }
 .dialog-toolbar p { margin: 0; color: var(--muted); }
 .dialog-close, .gallery-step { min-width: 44px; min-height: 44px; padding: .4rem .8rem; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; font: .875rem/1.5 var(--sans); }
+.dialog-close { background: transparent; border: 0; }
 .dialog-image { margin: auto; width: auto; max-height: 65dvh; object-fit: contain; }
 .dialog-caption { margin-top: 1rem; }
 .dialog-bottom { display: flex; justify-content: space-between; gap: 1rem; margin-top: 1rem; }
@@ -142,6 +152,8 @@ html:has(.photo-dialog[open]) { overflow: hidden; }
   .portrait { width: 104px; height: 104px; margin: 0; }
   .profile-photo { width: 104px; }
   .contact-section { margin-top: 2rem; }
+  .education-list { --date-column: 6.25rem; }
+  .education-row { column-gap: .75rem; }
   .home-section { margin-top: 2.25rem; padding-top: 2rem; }
   .photo-preview, .gallery { grid-template-columns: 1fr; gap: 1.25rem; }
   .gallery { row-gap: 2.5rem; }
